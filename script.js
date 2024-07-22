@@ -2,6 +2,8 @@ const smallGlass = document.querySelectorAll(".glass-small");
 const percentage = document.getElementById("percentage");
 const remained = document.getElementById("remained");
 const body = document.querySelector(".body");
+const title = document.querySelector("h1");
+const goal = document.querySelector("h3");
 
 updateBigCup();
 
@@ -37,8 +39,12 @@ function updateBigCup() {
     percentage.style.height = 0;
   }
   if (fullGlasses === totalGlasses) {
-    body.style.backgroundColor = "#0F67B1";
+    title.innerText = "Well done!";
+    title.style.fontSize = "80px";
+    title.style.color = "#FF4191";
+    goal.style.visibility = "hidden";
     percentage.style.height = `${(fullGlasses / totalGlasses) * 350}px`;
+    body.style.backgroundColor = "#0F67B1";
   } else {
     percentage.style.visibility = "visible";
     percentage.style.height = `${(fullGlasses / totalGlasses) * 350}px`;
