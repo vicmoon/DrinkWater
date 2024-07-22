@@ -1,12 +1,13 @@
 const smallGlass = document.querySelectorAll(".glass-small");
-s;
 const percentage = document.getElementById("percentage");
 const remained = document.getElementById("remained");
+const body = document.querySelector(".body");
 
 updateBigCup();
 
 smallGlass.forEach((glass, index) => {
   glass.addEventListener("click", () => highlightGlass(index));
+  console.log("Clicked");
 });
 
 function highlightGlass(index) {
